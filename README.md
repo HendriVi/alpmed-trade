@@ -35,6 +35,8 @@ Inventory is stored in `inventory.js`. Keep the same object structure and add or
 
 The included GitHub Actions workflow publishes the repository to GitHub Pages whenever the `main` branch changes. In GitHub, set **Settings → Pages → Source** to **GitHub Actions**.
 
+Deployment trigger added after the initial repository upload.
+
 ## Structure
 
 - `index.html` — page structure and copy
