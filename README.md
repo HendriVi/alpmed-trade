@@ -1,55 +1,24 @@
-# AlpMed Trade website
+# AlpMed Trade
 
-A responsive static website for a Swiss-led pre-owned medical equipment brokerage.
+Medical equipment brokerage website, persistent buyer and supplier enquiries, and owner-only mobile dashboard. Based on the existing HendriVi/alpmed-trade website and supplied Medical Brokerage OS.
 
-## Website files
+## Application
+- `/`: preserved AlpMed design; enquiries save to D1.
+- `/admin`: ChatGPT sign-in, restricted server-side to OWNER_EMAIL.
+- `/privacy`: private-stage notice; legal operator details required before public launch.
+- `brokerage/src/`: validated intake, catalogue and owner API, brokerage rules.
+- `brokerage/private/`: HTML served by Worker; owner HTML is never a public static asset.
+- `public/`: scripts, styles and original brand assets.
+- `db/schema.ts`, `drizzle/`: production database schema and immutable applied migrations.
+- `operating-system/`: operating instructions and current checkpoint.
 
-The complete website is present in both `main` and `gh-pages`:
+## Hosting
+ChatGPT Sites provisions the Cloudflare Worker and D1 database identified by `.openai/hosting.json`. Source is mirrored to its deployment repository. This GitHub repository remains the source handoff. GitHub Pages cannot run the database or APIs. The old Pages branch remains a clearly labelled holding page until public launch.
 
-- `index.html` — page structure and copy
-- `styles.css` — responsive visual design
-- `app.js` — catalogue filters, dialogs and enquiry handling
-- `inventory.js` — catalogue inventory
-- `assets/favicon.svg` — site icon
-- `robots.txt` and `.nojekyll` — static hosting files
+Runtime settings: `OWNER_EMAIL` (secret), `RATE_LIMIT_SALT` (secret), `INTAKE_ENABLED` (false until legal/privacy requirements pass). Credentials are never committed. The gateway supplies authenticated identity headers; do not deploy this worker behind a proxy that accepts visitor-supplied identity headers.
 
-## Publish the website
+## Verification
+Run `node --test brokerage/tests/*.test.js`. Tests use the generated production migrations. Build through the Sites helper documented by the Sites skill. No demonstration stock is seeded. Every supplier submission starts unverified and hidden.
 
-The deployment-ready branch is **`gh-pages`**. No build process is required.
-
-Open **Settings → Pages** and select:
-
-- **Source:** Deploy from a branch
-- **Branch:** `gh-pages`
-- **Folder:** `/ (root)`
-
-Then click **Save**. The published address is:
-
-`https://hendrivi.github.io/alpmed-trade/`
-
-Direct settings link:
-
-`https://github.com/HendriVi/alpmed-trade/settings/pages`
-
-## Required before commercial launch
-
-1. Register the chosen domain and replace `trade@alpmedtrade.com` in `index.html` and `app.js`.
-2. Replace the six demonstration listings in `inventory.js` with verified inventory.
-3. Remove the yellow demonstration banner from `index.html`.
-4. Connect both forms to an email service, CRM or form endpoint.
-5. Add the registered company name, address, privacy notice, terms and regulatory disclosures.
-6. Verify ownership, condition, configuration, documentation, deinstallation scope and regulatory status for every listed asset.
-
-## Updating inventory
-
-Edit `inventory.js`. The catalogue count, filters and country list update automatically.
-
-## Local preview
-
-Open `index.html` directly, or run:
-
-```bash
-python3 -m http.server 8080
-```
-
-Then visit `http://localhost:8080`.
+## Current limits
+Public launch is blocked pending confirmed legal operator/contact details, privacy policy and the supplied launch gates. The private owner can use synthetic test submissions. Email notifications, escrow, shipping, invoicing and automated sourcing are not configured. Dashboard checks are recorded workflow gates, not proof of regulatory approval.

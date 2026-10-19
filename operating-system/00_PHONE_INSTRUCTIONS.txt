@@ -1,0 +1,23 @@
+MEDICAL BROKERAGE OS — IPHONE QUICK START
+
+This ZIP is the entire ordered workspace. Do not create spreadsheets, new folders or more plans.
+
+1. In iPhone Files, save the ZIP in iCloud Drive / Medical Equipment Brokerage.
+2. Tap it once to extract the Medical_Brokerage_OS folder.
+3. The only file to open first is 00_START_HERE.md.
+4. The numbered folders are the ten steps of the brokerage, in execution order.
+5. To have an AI coding agent deploy the included prototype, give that agent the ZIP and the instruction RUN_WITH_AI.md. Deployment requires your hosting account, credentials, business details, and compliance approval.
+
+INCLUDED AND TESTED:
+- responsive buyer and supplier inquiry forms
+- owner-only phone dashboard
+- verified offer publication
+- automatic category/budget/date matching
+- profit-positive fee calculator
+- evidence-gated deal progression
+- numbered single-agent ICM instructions
+
+NOT YET LIVE / NOT YET AUTOMATED:
+- live website hosting, third-party payment, freight, outbound email, online lead research and legal approval.
+
+Do not rely on examples as confirmed stock or real buying intent.

@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Swiss-led brokerage for verified pre-owned medical equipment. Browse available equipment or sell surplus assets across borders.">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>AlpMed Trade — Pre-owned medical equipment</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="demo-banner" role="note">
+    <strong>Private setup.</strong> Public enquiries are not open. Use synthetic details for testing.
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="AlpMed Trade home">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span></span>
+      <span class="brand-name">ALPMED <b>TRADE</b></span>
+    </a>
+
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation">
+      <span></span><span></span>
+      <span class="sr-only">Open menu</span>
+    </button>
+
+    <nav id="primary-navigation" class="primary-navigation" aria-label="Primary navigation">
+      <a href="#catalogue">Available equipment</a>
+      <a href="#process">How it works</a>
+      <a href="#sell">Sell equipment</a>
+      <a class="nav-cta" href="#request">Request equipment</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero section-shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="swiss-dot"></span> Swiss-led · European equipment sourcing</div>
+        <h1>Medical equipment,<br>moved intelligently.</h1>
+        <p>Find pre-owned medical equipment or submit an asset for review. We connect buyers and suppliers, with verification before any transaction.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#catalogue">Browse available equipment</a>
+          <a class="button button-secondary" href="#sell">Sell equipment</a>
+        </div>
+      </div>
+
+      <aside class="market-card" aria-label="Marketplace overview">
+        <div class="market-card-head">
+          <span>Available now</span>
+          <span class="status-dot">Reviewed offers</span>
+        </div>
+        <div class="market-metric">
+          <strong id="available-count">0</strong>
+          <span>listed systems</span>
+        </div>
+        <div class="market-grid">
+          <div><span>Origins</span><strong id="country-count">0 countries</strong></div>
+          <div><span>Response</span><strong>Personal review</strong></div>
+        </div>
+        <a href="#catalogue">View equipment <span aria-hidden="true">↗</span></a>
+      </aside>
+    </section>
+
+    <section class="trust-strip" aria-label="Service principles">
+      <div><span>01</span><strong>Swiss coordination</strong></div>
+      <div><span>02</span><strong>Documentation review</strong></div>
+      <div><span>03</span><strong>Delivery coordination</strong></div>
+      <div><span>04</span><strong>Independent brokerage</strong></div>
+    </section>
+
+    <section id="catalogue" class="catalogue section-shell section-space">
+      <div class="section-heading catalogue-heading">
+        <div>
+          <div class="eyebrow">Reviewed supplier offers</div>
+          <h2>Available equipment</h2>
+        </div>
+        <p>Equipment remains at its current location until sale. We coordinate verification, commercial terms and delivery.</p>
+      </div>
+
+      <div class="catalogue-tools" aria-label="Catalogue filters">
+        <label class="search-field">
+          <span class="sr-only">Search equipment</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+          <input id="catalogue-search" type="search" placeholder="Search equipment, brand or model">
+        </label>
+        <label>
+          <span class="sr-only">Filter by category</span>
+          <select id="category-filter"><option value="all">All categories</option></select>
+        </label>
+        <label>
+          <span class="sr-only">Filter by origin country</span>
+          <select id="country-filter"><option value="all">All origins</option></select>
+        </label>
+        <button id="clear-filters" class="filter-reset" type="button">Clear</button>
+      </div>
+
+      <div class="result-row">
+        <span id="result-count">0 results</span>
+        <span>Price on request · Ex works unless stated</span>
+      </div>
+
+      <div id="catalogue-grid" class="catalogue-grid" aria-live="polite"></div>
+      <div id="empty-state" class="empty-state" hidden>
+        <h3>No verified offers published yet</h3>
+        <p>Tell us what you need. Availability is confirmed directly with suppliers.</p>
+        <a href="#request">Submit a request</a>
+      </div>
+    </section>
+
+    <section id="process" class="process section-space">
+      <div class="section-shell">
+        <div class="section-heading split-heading">
+          <div>
+            <div class="eyebrow">Brokerage process</div>
+            <h2>One transaction.<br>One point of contact.</h2>
+          </div>
+          <p>We connect supply and demand without forcing equipment through an unnecessary warehouse layer.</p>
+        </div>
+
+        <div class="process-grid">
+          <article>
+            <span>01</span>
+            <h3>Define the asset</h3>
+            <p>Send the equipment details or your buying requirement.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Verify and match</h3>
+            <p>We review condition, documentation, location and buyer fit.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Move the equipment</h3>
+            <p>Responsibilities for inspection, transport and installation are agreed with qualified partners before a transaction.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sell" class="sell-section section-shell section-space">
+      <div class="sell-panel">
+        <div>
+          <div class="eyebrow eyebrow-light">For hospitals, clinics and dealers</div>
+          <h2>Turn surplus equipment into working capital.</h2>
+        </div>
+        <div class="sell-copy">
+          <p>Submit the equipment details and location. We review your enquiry before discussing potential buyers and next steps.</p>
+          <button class="button button-light" type="button" data-open-form="sell">Submit equipment</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="request" class="request section-shell section-space">
+      <div class="request-card">
+        <div class="request-intro">
+          <div class="eyebrow">Equipment request</div>
+          <h2>Looking for a specific system?</h2>
+          <p>Tell us what you need and where it has to go.</p>
+          <p class="contact-note">Business enquiries only. Do not submit patient information.</p>
+        </div>
+
+        <form id="request-form" class="request-form">
+          <input type="hidden" name="requestType" value="buy"><label><span>Equipment category</span><select name="category" required><option value="ultrasound">Ultrasound</option><option value="patient-monitoring">Patient monitoring</option><option value="laboratory">Laboratory</option><option value="endoscopy">Endoscopy</option><option value="other">Other equipment</option></select></label><label><span>Clinic / organisation</span><input name="clinic" required maxlength="150"></label><div class="form-row"><label><span>Budget EUR (0 if undecided)</span><input name="budget_eur" type="number" min="0" max="100000000" value="0" required></label><label><span>Timeline</span><input name="timeline" placeholder="e.g. Within 3 months"></label></div>
+          <label>
+            <span>Equipment</span>
+            <input name="equipment" required placeholder="e.g. 64-slice CT scanner">
+          </label>
+          <div class="form-row">
+            <label>
+              <span>Preferred brand or model</span>
+              <input name="model" placeholder="Optional">
+            </label>
+            <label>
+              <span>Destination country</span>
+              <input name="destination" required placeholder="Country">
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              <span>Your name</span>
+              <input name="name" autocomplete="name" required>
+            </label>
+            <label>
+              <span>Business email</span>
+              <input name="email" type="email" autocomplete="email" required>
+            </label>
+          </div>
+          <label>
+            <span>Additional details</span>
+            <textarea name="details" rows="4" placeholder="Quantity, year range, configuration or deadline"></textarea>
+          </label>
+          <label class="consent"><input type="checkbox" name="consent" required><span>I have read the <a href="/privacy" target="_blank">privacy notice</a> and request a response to this business enquiry.</span></label><label class="honey" aria-hidden="true">Leave blank<input name="website" tabindex="-1" autocomplete="off"></label><p class="form-message" role="status" aria-live="polite"></p><div class="form-footer">
+            <button class="button button-primary" type="submit">Send enquiry</button>
+            <small>Your enquiry is saved securely for private review. No purchase commitment.</small>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="compliance section-shell">
+      <div>
+        <span>Transaction standard</span>
+        <p>Condition, configuration and regulatory documentation are confirmed per asset. Buyers remain responsible for local registration, installation and clinical use requirements.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main section-shell">
+      <a class="brand brand-footer" href="#top">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span></span>
+        <span class="brand-name">ALPMED <b>TRADE</b></span>
+      </a>
+      <p>Pre-owned medical equipment brokerage<br>Zurich · Switzerland</p>
+      <div class="footer-links">
+        <a href="#catalogue">Equipment</a>
+        <a href="#sell">Sell</a>
+        <a href="#request">Request</a>
+      </div>
+    </div>
+    <div class="footer-bottom section-shell">
+      <span>© <span id="current-year"></span> AlpMed Trade. Proposed brand.</span>
+      <span><a href="/privacy">Privacy</a> · <a href="/admin">Owner dashboard</a></span>
+    </div>
+  </footer>
+
+  <dialog id="equipment-dialog" class="equipment-dialog">
+    <button class="dialog-close" type="button" aria-label="Close equipment details">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+
+  <dialog id="sell-dialog" class="equipment-dialog form-dialog">
+    <button class="dialog-close" type="button" aria-label="Close sell equipment form">×</button>
+    <div class="dialog-form-wrap">
+      <div class="eyebrow">Sell equipment</div>
+      <h2>Submit an asset</h2>
+      <p>Provide the basic details. Do not include patient information. Your submission stays private until reviewed.</p>
+      <form id="sell-form" class="request-form">
+        <input type="hidden" name="requestType" value="sell"><label><span>Equipment category</span><select name="category" required><option value="ultrasound">Ultrasound</option><option value="patient-monitoring">Patient monitoring</option><option value="laboratory">Laboratory</option><option value="endoscopy">Endoscopy</option><option value="other">Other equipment</option></select></label><label><span>Company</span><input name="company" required maxlength="150"></label><label><span>Asking price EUR</span><input name="asking_price_eur" type="number" min="1" max="100000000" required></label>
+        <label><span>Equipment / model</span><input name="equipment" required></label>
+        <div class="form-row">
+          <label><span>Year</span><input name="year" inputmode="numeric"></label>
+          <label><span>Current country</span><input name="country" required></label>
+        </div>
+        <div class="form-row">
+          <label><span>Your name</span><input name="name" required autocomplete="name"></label>
+          <label><span>Business email</span><input name="email" required type="email" autocomplete="email"></label>
+        </div>
+        <label><span>Condition and notes</span><textarea name="details" rows="4"></textarea></label>
+        <div class="form-row"><label><span>Availability confirmed until</span><input name="stock_valid_until" type="date"></label><label><span>Documented service life remaining (years)</span><input name="service_years_remaining" type="number" min="0" max="50"></label></div><label><span>Equipment documentation link (optional)</span><input name="evidence_url" type="url" placeholder="https://"></label><label class="consent"><input type="checkbox" name="consent" required><span>I have read the <a href="/privacy" target="_blank">privacy notice</a> and request a response to this business enquiry.</span></label><label class="honey" aria-hidden="true">Leave blank<input name="website" tabindex="-1" autocomplete="off"></label><p class="form-message" role="status" aria-live="polite"></p><button class="button button-primary" type="submit">Submit equipment</button>
+      </form>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

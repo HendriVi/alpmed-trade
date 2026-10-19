@@ -1,0 +1,8 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Owner dashboard | AlpMed Trade</title><link rel="stylesheet" href="/admin.css"></head><body><header><div class="inner"><a href="/" class="brand">ALPMED TRADE</a><div class="nav">Owner workspace</div></div></header><main>
+<section id="workspace"><div class="row"><div><div class="kicker">Control center</div><h1 style="font-size:2rem;margin:8px 0">Your deal pipeline</h1></div><a href="/signout-with-chatgpt?return_to=%2F" target="_top">Sign out</a><button id="refresh" class="secondary">Refresh</button></div>
+<div id="kpis" class="grid"></div><p class="note"><strong>Source of truth:</strong> This dashboard, not a separate spreadsheet. Public forms automatically create records. Review before publication or any commercial commitment.</p>
+<div class="tabs"><button data-tab="buyers" class="active">Buyers</button><button data-tab="suppliers">Suppliers</button><button data-tab="listings">Offers</button><button data-tab="deals">Deals</button></div>
+<div id="buyers" class="list"></div><div id="suppliers" class="list hidden"></div><div id="listings" class="list hidden"></div><div id="deals" class="list hidden"></div>
+<p id="opMessage" class="message" role="status"></p>
+<p class="footer">Private area. Owner approval is required for supplier verification, offer publication, contract progression and payment confirmation. <a href="/">Public site</a></p>
+</section></main><script type="module" src="/admin.js"></script></body></html>
